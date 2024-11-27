@@ -29,3 +29,4 @@ Kullanılan Teknolojiler 💥
 ![A8](https://github.com/user-attachments/assets/907dbeae-0c47-445e-951e-acaba96df583)
 ![A9](https://github.com/user-attachments/assets/8c82eb74-a88d-47ab-969f-cf91d846f0d6)
 ![A10](https://github.com/user-attachments/assets/07b92c59-b2db-4afe-b87f-db12a0920abe)
+![db](https://github.com/user-attachments/assets/f49a07d9-d8db-4b57-ba80-1836fb59dede)
