@@ -6,15 +6,15 @@ Sitede bulunan Ana sayfa, Hakkımda, Projelerim, Referanslarım ve İletişim sa
 
 Kullanılan Teknolojiler 💥
 
-MVC
-Asp.Net Core
-CodeFirst
-EntityFramework
-HTML
-CSS
-Bootstrap
-JavaScript
-MSSql
+-MVC,
+-Asp.Net Core,
+-CodeFirst,
+-EntityFramework,
+-HTML,
+-CSS,
+-Bootstrap,
+-JavaScript,
+-MSSql
 
 
 ![1](https://github.com/user-attachments/assets/019a9c0d-6bf5-4a66-a45b-27d01cbbf11f)
