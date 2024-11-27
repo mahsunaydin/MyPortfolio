@@ -1,0 +1,87 @@
+﻿@model AboutFeatureViewModel
+
+@{
+    ViewData["Title"] = "AboutList";
+    Layout = "~/Views/Layout/Index.cshtml";
+    int id = 1;
+}
+
+<div class="content">
+
+    @* Feature Alanı *@
+    <div class="container-fluid">
+        <h4 class="page-title" style="background-color:aliceblue">Feature</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Feature Alanı İle İlgili İşlemleri Aşağıdaki Panelden Yapabilirsiniz
+                        </div>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">İçerik</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.featureList)
+                                {
+                                    <tr>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                        <a href="/About/UpdateAboutFeature/@id" class="btn btn-primary">Güncelle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Hakkımda Alanı *@
+    <div class="container-fluid">
+        <h4 class="page-title" style="background-color:aliceblue">Hakkımda</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Hakkımda Alanı İle İlgili İşlemleri Aşağıdaki Panelden Yapabilirsiniz
+                        </div>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">Alt Başlık</th>
+                                    <th scope="col">Detay Açıklama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.aboutList)
+                                {
+                                    <tr>
+                                        <td>@item.Title</td>
+                                        <td>@item.SubDescription</td>
+                                        <td>@item.Details</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/About/UpdateAbout/@id" class="btn btn-primary">Güncelle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+

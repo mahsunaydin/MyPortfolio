@@ -1,0 +1,86 @@
+﻿@model List<Contact>
+
+@{
+    ViewData["Title"] = "ContactList";
+    Layout = "~/Views/Layout/Index.cshtml";
+    int id = 2;
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title" style="background-color:aliceblue">İletişim Bilgileri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Başlık ve Açıklama Alanı Bilgileri
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table mt-3 table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Contact/UpdateContactToHeader/@id" class="btn btn-primary">Güncelle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Adres, Telefon ve Mail Bilgileri
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table mt-3 table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Mail1</th>
+                                    <th>Mail2</th>
+                                    <th>Telefon1</th>
+                                    <th>Telefon2</th>
+                                    <th>Adres</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Email1</td>
+                                        <td>@item.Email2</td>
+                                        <td>@item.Phone1</td>
+                                        <td>@item.Phone2</td>
+                                        <td>@item.Address</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Contact/UpdateContactToDetail/@id" class="btn btn-primary">Güncelle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

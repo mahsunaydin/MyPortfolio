@@ -1,0 +1,43 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "UpdateContactToHeader";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title" style="background-color:aliceblue">İletişim Bilgileri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Başlık ve Açıklama Güncelleme
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post">
+                            <input type="hidden" asp-for="ContactId" class="form-control" />
+                            <input type="hidden" asp-for="Phone1" value ="@Model.Phone1" class="form-control" />
+                            <input type="hidden" asp-for="Phone2" value ="@Model.Phone2" class="form-control" />
+                            <input type="hidden" asp-for="Email1" value ="@Model.Email1" class="form-control" />
+                            <input type="hidden" asp-for="Email2" value ="@Model.Email2" class="form-control" />
+                            <input type="hidden" asp-for="Address" value ="@Model.Address" class="form-control" />
+
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <textarea rows="4" asp-for="Description" class="form-control"></textarea>
+                            <br />
+                            <button class="btn btn-success">Bilgileri Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
